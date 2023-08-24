@@ -40,7 +40,7 @@ const backdrop = document.querySelector('.backdrop')
 const itemsEl = document.querySelector( '.items')
 const cartitems = document.querySelector( '.cart_items')
 
-let cart_data = []
+const cart_data = []
 
 
 openbtn.addEventListener('click', opencart)
@@ -78,9 +78,10 @@ function additem(idx, itemId){
     )
 
     if(foundeditem){
+
         // increase item qty
 
-    }else{
+    } else{
         cart_data.push(ITEMS[idx])
     }
     updatecart()
@@ -112,31 +113,31 @@ function renderItems() {
 }
 
 //display / render cart items
-function rendercartitems(){
+function rendercartitems() {
     // remove everything from cart
     cartitems.innerHTML = ''
     // add new data
-    cart_data.forEach(item =>{
+    cart_data.forEach(item => {
         const cartitem = document.createElement('div')
         cartitem.classList.add('cart_item')
         cartitem.innerHTML=`  <div class="remove_item" onclick="removecartitem(${item.id})" >
-        <span>&times;</span>
-    </div>
-    <div class="item_img">
-      <img src=" ${item.image}" alt="" />  
-    </div>
-    <div class="item_details">
-        <p> ${item.name}</p>
-        <strong>$${item.price}</strong>
-        <div class="qty">
-            <span>-</span>
-            <strong>${item.qty}</strong>
+              <span>&times;</span>
+               </div>
+              <div class="item_img">
+                <img src="${item.image}" alt="" />  
+               </div>
+              <div class="item_details">
+               <p>${item.name}</p>
+               <strong>$${item.price}</strong>
+              <div class="qty">
+             <span>-</span>
+             <strong>${item.qty}</strong>
 
-            <span>+</span>
-        </div>
-    </div>
-        `
-        cartitems.appendChild(cartitem)
+               <span>+</span>
+              </div>
+              </div>
+                  `   
+     cartitems.appendChild(cartitem)
     })
 
 }
