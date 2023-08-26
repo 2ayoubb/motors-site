@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-    <link rel="stylesheet" href="log.css">
+  <!-- Linking to the external CSS stylesheet -->
+  <link rel="stylesheet" href="log.css">
+  <!-- Setting the title of the webpage -->
+  <title>LOGIN</title>
 </head>
 <body>
-  <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>  
-    </ul>
-  </nav>
-    <div>
-      <legend>login</legend>
-      <div>
-        <label for="txt">user name</label>
-        <input type="txt" type="text" placeholder="put your name" required> 
-      </div>
-      <div>
-        <label for="mail">E-mail</label>
-        <input type="mail" type="email" placeholder="put your email" required> 
-      </div>
-      <div>
-        <label for="pass">password</label>
-        <input type="pass" type="password" placeholder="put your password" required> 
-      </div>
-      <input type="submit" value="login">
-    </div>
-    
+    <!-- Creating a section to contain the login form -->
+    <section>
+        <!-- Creating a box to hold the form -->
+        <div class="form-box">
+            <!-- Creating a container for the form elements -->
+            <div class="form-value">
+                <!-- Creating a form for the login inputs -->
+                <form action="">
+                    <!-- Heading for the login section -->
+                    <h2>Login</h2>
+                    <!-- Container for the email input -->
+                    <div class="inputbox">
+                        <!-- Adding an icon using ion-icon -->
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <!-- Email input field -->
+                        <input type="email" required>
+                        <!-- Label for the email input -->
+                        <label for="">Email</label>
+                    </div>
+                    <!-- Container for the password input -->
+                    <div class="inputbox">
+                        <!-- Adding a lock icon using ion-icon -->
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <!-- Password input field -->
+                        <input type="password" required>
+                        <!-- Label for the password input -->
+                        <label for="">Password</label>
+                    </div>
+                    <!-- Container for the "Remember Me" checkbox and "Forget Password" link -->
+                    <div class="forget">
+                        <!-- Checkbox to remember login -->
+                        <label for=""><input type="checkbox">Remember Me <a href="#">Forget Password</a></label>
+                    </div>
+                    <!-- Button to submit the login form -->
+                    <button>Log in</button>
+                    <!-- Container for the "Register" link -->
+                    <div class="register">
+                        <!-- Link to register for a new account -->
+                        <p>Don't have an account <a href="#">Register</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Including ionicons scripts for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
